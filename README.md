@@ -35,3 +35,12 @@ cd docker
 cd docker
 ./project-stop-container
 ```
+
+## Setup
+#### 1. start container and enter container shell
+#### 2. run the script to install opensfm
+```sh
+cd install_opensfm
+./install_opensfm_on_desktop.sh
+```
+#### 3. Run 3d reconstruction app(See **[custom fork](https://github.com/ArthurWuTW/OpenSfM)**)
