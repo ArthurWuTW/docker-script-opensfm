@@ -5,6 +5,10 @@ xhost +local:
 source $(dirname $0)/common.sh
 source $(dirname $0)/utils.sh
 
+CPU_LIMIT="\
+     --cpus 2 \
+"
+
 GRAPHICS_OPTS="\
     --env DISPLAY=$DISPLAY \
     --volume /tmp/.X11-unix:/tmp/.X11-unix \
@@ -30,6 +34,7 @@ run_container() {
     docker run \
         --privileged \
         --name $CONTAINER_NAME \
+        $CPU_LIMIT \
         --rm \
         --user $CONTAINER_USER \
         --volume $REPO_DIR:$CONTAINER_REPO_DIR \
