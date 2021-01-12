@@ -6,7 +6,7 @@ source $(dirname $0)/common.sh
 source $(dirname $0)/utils.sh
 
 CPU_LIMIT="\
-     --cpus 2 \
+     --cpus 1 \
 "
 
 GRAPHICS_OPTS="\
